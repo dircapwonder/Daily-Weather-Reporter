@@ -1,7 +1,5 @@
 # Daily Weather Story Generator
 
-> Fetches current weather for cities in Turkey, the UK, and around the world, draws it onto story-style images, and emails them as PDFs.
-
 A small Python project that pulls live weather data from the [OpenWeatherMap API](https://openweathermap.org/api), renders the temperature and humidity of five cities onto a ready-made story template, and saves the results as PNG and PDF files. All generated PDFs are then sent by email through Gmail.
 
 ## Features
@@ -71,8 +69,6 @@ Gmail requires an **App Password** instead of your normal password:
 2. Create an App Password in your Google account security settings.
 3. Use that App Password in `sender.py`.
 
-> **Security note:** Never commit your real API key, email address, or App Password to GitHub. Consider loading them from environment variables or a `.env` file listed in `.gitignore`.
-
 ### 3. Choose your cities (optional)
 
 The cities are defined as lists in `weather.py`. Each list holds five city names, followed by a label that is used in the output file names:
@@ -112,10 +108,7 @@ To run it automatically every day, schedule it with `cron` (Linux/macOS) or Task
 ## Limitations
 
 - **Fixed layout:** Text positions are hardcoded for the template, so each region must have exactly five cities, and long city names may overflow their cell.
-- **Current conditions:** The image is titled "Today's Weather Forecast", but the data is the current weather at the time the script runs, not a forecast.
 - **No error handling:** If a city name isn't found or the API request fails, the script will crash.
-- **City names:** OpenWeatherMap must recognize the names you use. Regions such as Hokkaido work, but unusual spellings may not.
-- **Unused file:** Only the PDFs are emailed, and the PNG files are saved locally.
 
 ## Ideas for Improvement
 
