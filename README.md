@@ -27,6 +27,7 @@ Each image has the same layout: a title, today's date, and a table of five citie
 ├── sender.py               # Sends the generated PDFs by email
 ├── story.png               # Blank template image (background and table layout)
 ├── ClarityCity-Light.ttf   # Font used for all text
+├── LICENSE                 # MIT License
 └── OFL.txt                 # License of the font (SIL Open Font License 1.1)
 ```
 
@@ -125,6 +126,10 @@ To run it automatically every day, schedule it with `cron` (Linux/macOS) or Task
 - Font: Clarity City from [Google Fonts](https://fonts.google.com/), © 2019 The Clarity City Project Authors, licensed under the [SIL Open Font License 1.1](https://openfontlicense.org). See `OFL.txt` for the full license text.
 - Template image (`story.png`): created by the author
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).The font used to draw the images ClarityCity-Light is licensed under the [SIL Open Font License 1.1](OFL.txt) and is not covered by the MIT License.
+
 ## Disclaimer
 
-This project is for personal and educational use.
+This project is not affiliated with OpenWeatherMap. Weather data comes from the OpenWeatherMap API and is subject to their terms of use. The data is shown for general information only and may be delayed or inaccurate. Do not use your own email credentials or API key in public code.
